@@ -251,9 +251,11 @@
     font-size: 3rem;
     position: relative; overflow: hidden;
   }
+  .card-visual span { position: relative; z-index: 1; }
   .card-visual::after {
     content: ''; position: absolute; inset: 0;
     background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.06));
+    pointer-events: none;
   }
   .cv-green { background: var(--green-pale); }
   .cv-cream { background: var(--accent-pale); }
@@ -476,7 +478,7 @@
     <div class="articles-grid">
 
       <a href="guides/creatine-beginners.html" class="article-card reveal">
-        <div class="card-visual cv-green">💪</div>
+        <div class="card-visual cv-green"><span>💪</span></div>
         <div class="card-body">
           <div class="card-tag">Muscle & Strength</div>
           <h3>Creatine for Beginners: Does It Work?</h3>
@@ -489,7 +491,7 @@
       </a>
 
       <a href="guides/whey-protein-beginners.html" class="article-card reveal">
-        <div class="card-visual cv-cream">🥛</div>
+        <div class="card-visual cv-cream"><span>🥛</span></div>
         <div class="card-body">
           <div class="card-tag">Protein</div>
           <h3>Whey Protein: How to Choose and Use It</h3>
@@ -502,7 +504,7 @@
       </a>
 
       <a href="guides/omega3-beginners.html" class="article-card reveal">
-        <div class="card-visual cv-blue">🐟</div>
+        <div class="card-visual cv-blue"><span>🐟</span></div>
         <div class="card-body">
           <div class="card-tag">Health & Recovery</div>
           <h3>Omega-3: Benefits, Dosage & Best Brands</h3>
@@ -515,7 +517,7 @@
       </a>
 
       <a href="guides/vitamin-d3-beginners.html" class="article-card reveal">
-        <div class="card-visual cv-amber">☀️</div>
+        <div class="card-visual cv-amber"><span>☀️</span></div>
         <div class="card-body">
           <div class="card-tag">Immunity & Bone Health</div>
           <h3>Vitamin D3: The Silent Deficiency Affecting Billions</h3>
