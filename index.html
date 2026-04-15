@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name='impact-site-verification' value='ccf213e2-a076-4cf6-a54e-1b5a66e9bd9b'>
+<script>if('scrollRestoration'in history){history.scrollRestoration='manual';}</script>
 <title>SuppStarter — Honest Supplement Guides for Beginners</title>
 <meta name="description" content="Science-backed supplement guides for beginners. No hype, no miracles — just clear, honest information to help you make smarter choices.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -460,6 +461,7 @@
         <p>Anti-inflammatory. Heart, brain, joints.</p>
       </a>
       <a href="guides/vitamin-d3-beginners.html" class="supp-card">
+        <div class="supp-icon">☀️</div>
         <h4>Vitamin D3</h4>
         <p>Most people are deficient and don't know it.</p>
       </a>
@@ -600,11 +602,11 @@
     });
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
-
-  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-  document.documentElement.style.scrollBehavior = 'auto';
-  window.scrollTo(0, 0);
-  setTimeout(() => { document.documentElement.style.scrollBehavior = ''; }, 50);
+  window.addEventListener('pageshow', function() {
+    document.documentElement.style.scrollBehavior = 'auto';
+    window.scrollTo(0, 0);
+    setTimeout(() => { document.documentElement.style.scrollBehavior = ''; }, 100);
+  });
 </script>
 </body>
 </html>
