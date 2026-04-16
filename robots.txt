@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://suppstarter.github.io/suppstarter/sitemap.xml
