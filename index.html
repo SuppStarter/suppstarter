@@ -384,6 +384,38 @@
     .featured-visual .supp-card:first-child { margin-top: 0; }
     .trust-bar { gap: 1.5rem; }
   }
+
+/* ===== SleepLab transition ===== */
+.sleeplab-transition{position:relative;margin:6rem -2rem 0;padding:9rem 2rem 6rem;background:linear-gradient(180deg,var(--cream,#F7F4EF) 0%,#DCE0E8 12%,#8896B5 32%,#4A567A 52%,#1F2452 72%,#080B1A 100%);text-align:center;overflow:hidden;border-top-left-radius:32px;border-top-right-radius:32px}
+.sl-stars{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity 1.5s ease}
+.sl-stars.in{opacity:1}
+.sl-star{position:absolute;width:2px;height:2px;background:white;border-radius:50%;animation:sl-twinkle 4s ease-in-out infinite}
+.sl-star.tiny{width:1px;height:1px}
+.sl-star.bright{width:3px;height:3px;box-shadow:0 0 6px rgba(255,255,255,.6)}
+@keyframes sl-twinkle{0%,100%{opacity:0}50%{opacity:.85}}
+.sleeplab-moon{position:relative;width:80px;height:80px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#FFD089,#E8B86D 60%,#9C7A45);box-shadow:0 0 0 rgba(232,184,109,0);margin:0 auto 2.5rem;opacity:0;transform:translateY(40px) scale(.8);transition:opacity 1.6s ease,transform 1.6s ease,box-shadow 1.6s ease}
+.sleeplab-moon.in{opacity:1;transform:translateY(0) scale(1);box-shadow:0 0 80px rgba(232,184,109,.45),0 0 30px rgba(232,184,109,.6);animation:sl-moon-glow 5s 1.6s ease-in-out infinite}
+@keyframes sl-moon-glow{0%,100%{box-shadow:0 0 80px rgba(232,184,109,.45),0 0 30px rgba(232,184,109,.6)}50%{box-shadow:0 0 110px rgba(232,184,109,.65),0 0 40px rgba(232,184,109,.8)}}
+.sleeplab-eyebrow{position:relative;font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#E8B86D;margin-bottom:1.4rem;display:inline-flex;align-items:center;gap:.7rem;opacity:0;transform:translateY(20px);transition:opacity 1.2s .3s ease,transform 1.2s .3s ease}
+.sleeplab-eyebrow.in{opacity:1;transform:translateY(0)}
+.sleeplab-eyebrow::before,.sleeplab-eyebrow::after{content:'';width:24px;height:1px;background:#E8B86D;opacity:.5}
+.sleeplab-title{position:relative;font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(1.9rem,4.2vw,2.8rem);line-height:1.2;letter-spacing:-.02em;color:#EDE9F5;max-width:620px;margin:0 auto 1.2rem;opacity:0;transform:translateY(30px);transition:opacity 1.2s .5s ease,transform 1.2s .5s ease}
+.sleeplab-title.in{opacity:1;transform:translateY(0)}
+.sleeplab-title em{font-style:italic;color:#E8B86D}
+.sleeplab-text{position:relative;font-size:1.02rem;color:rgba(237,233,245,.72);max-width:520px;margin:0 auto 2.8rem;line-height:1.75;font-weight:300;opacity:0;transform:translateY(30px);transition:opacity 1.2s .7s ease,transform 1.2s .7s ease}
+.sleeplab-text.in{opacity:1;transform:translateY(0)}
+.sleeplab-cta{position:relative;display:inline-flex;align-items:center;gap:.6rem;padding:.95rem 2.2rem;background:#E8B86D;color:#080B1A;border-radius:999px;font-size:.9rem;font-weight:500;text-decoration:none;letter-spacing:.01em;transition:all .3s ease;opacity:0;transform:translateY(30px);transition:opacity 1.2s .9s ease,transform 1.2s .9s ease,background .3s ease,box-shadow .3s ease}
+.sleeplab-cta.in{opacity:1;transform:translateY(0)}
+.sleeplab-cta:hover{background:#FFD089;box-shadow:0 16px 40px rgba(232,184,109,.4)}
+.sleeplab-cta-arrow{display:inline-block;transition:transform .3s ease}
+.sleeplab-cta:hover .sleeplab-cta-arrow{transform:translateX(4px)}
+
+/* ===== Nav moon link ===== */
+.nav-moon-link{display:inline-flex !important;align-items:center;gap:.5rem;font-size:.82rem;color:#4A567A !important;text-decoration:none;padding:.45rem 1rem .45rem .8rem;border-radius:999px;background:linear-gradient(135deg,rgba(31,36,82,.08),rgba(31,36,82,.04));border:1px solid rgba(31,36,82,.12);transition:all .3s ease;opacity:1 !important;font-weight:500}
+.nav-moon-link:hover{background:linear-gradient(135deg,rgba(31,36,82,.14),rgba(31,36,82,.08));border-color:rgba(31,36,82,.25);color:#1F2452 !important;transform:translateY(-1px)}
+.nav-moon-icon{display:inline-block;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#FFD089,#E8B86D 60%,#9C7A45);position:relative;animation:nav-moon-pulse 3s ease-in-out infinite}
+@keyframes nav-moon-pulse{0%,100%{box-shadow:0 0 6px rgba(232,184,109,.4),0 0 0 0 rgba(232,184,109,.4);transform:scale(1)}50%{box-shadow:0 0 12px rgba(232,184,109,.7),0 0 0 4px rgba(232,184,109,.05);transform:scale(1.08)}}
+@media(max-width:640px){.nav-moon-link span:last-child{display:none}}
 </style>
 </head>
 <body>
@@ -396,6 +428,7 @@
     <li><a href="#articles">Articles</a></li>
     <li><a href="articles.html">All Guides</a></li>
     <li><a href="about.html">About</a></li>
+      <li><a href="https://suppstarter.github.io/sleeplab/" class="nav-moon-link" title="SleepLab — The science of better rest"><span class="nav-moon-icon"></span><span>SleepLab</span></a></li>
   </ul>
 </nav>
 
@@ -659,6 +692,44 @@
 </section>
 
 <!-- FOOTER -->
+
+<section class="sleeplab-transition" aria-label="Discover SleepLab">
+  <div class="sl-stars" aria-hidden="true"></div>
+  <div class="sleeplab-moon" aria-hidden="true"></div>
+  <span class="sleeplab-eyebrow">A new chapter</span>
+  <h2 class="sleeplab-title">Supplements only go so far. <em>Sleep does the rest.</em></h2>
+  <p class="sleeplab-text">No supplement makes up for a bad night. If you've taken your nutrition seriously, take your nights just as seriously &mdash; with the science of better rest.</p>
+  <a href="https://suppstarter.github.io/sleeplab/" class="sleeplab-cta">Discover SleepLab <span class="sleeplab-cta-arrow">&rarr;</span></a>
+</section>
+<script>
+(function(){
+  var sec=document.querySelector('.sleeplab-transition');
+  if(!sec)return;
+  var stars=sec.querySelector('.sl-stars');
+  if(stars){
+    for(var i=0;i<50;i++){
+      var s=document.createElement('span');
+      var r=Math.random();
+      s.className='sl-star'+(r>.85?' bright':r>.5?'':' tiny');
+      s.style.top=(30+Math.random()*70)+'%';
+      s.style.left=Math.random()*100+'%';
+      s.style.animationDelay=(Math.random()*4)+'s';
+      s.style.animationDuration=(3+Math.random()*4)+'s';
+      stars.appendChild(s);
+    }
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var els=sec.querySelectorAll('.sleeplab-moon,.sl-stars,.sleeplab-eyebrow,.sleeplab-title,.sleeplab-text,.sleeplab-cta');
+        els.forEach(function(el){el.classList.add('in')});
+        io.unobserve(sec);
+      }
+    });
+  },{threshold:.25});
+  io.observe(sec);
+})();
+</script>
 <footer>
   <div class="footer-logo">Supp<span>Starter</span></div>
   <p>Honest supplement guides for people who want to understand what they're putting in their body. No hype, no miracles — just science and clarity.</p>
