@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://suppstarter.github.io/suppstarter/sitemap.xml
+Sitemap: https://suppstarter.github.io/suppstarter/sitemap.txt
